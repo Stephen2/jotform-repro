@@ -1,0 +1,22 @@
+{
+  "name": "jotform-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node --files src/index.ts",
+    "eslint": "eslint ./ --ext .ts,.tsx --cache"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.3",
+    "axios": "^0.21.1",
+    "dotenv": "^16.0.1",
+    "eslint": "^7.32.0",
+    "eslint-config-merit": "github:MeritOpenSource/eslint-config-merit",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  }
+}
