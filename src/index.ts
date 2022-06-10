@@ -11,6 +11,8 @@ const submissionId = process.env.SUBMISSION_ID;
 const jotformApiKey = process.env.JOTFORM_API_KEY;
 const jotformBaseUrl = process.env.JOTFORM_BASE_URL;
 
+console.log("USING: ", jotformBaseUrl);
+
 const writeStreamToDisk = async (stream: Stream) => {
   const { name: filePath } = tmp.fileSync();
   const writableStream = fs.createWriteStream(filePath);
