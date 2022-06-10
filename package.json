@@ -12,10 +12,12 @@
   "license": "ISC",
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.3",
+    "@types/tmp": "^0.2.3",
     "axios": "^0.21.1",
     "dotenv": "^16.0.1",
     "eslint": "^7.32.0",
     "eslint-config-merit": "github:MeritOpenSource/eslint-config-merit",
+    "tmp": "^0.2.1",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.3"
   }
