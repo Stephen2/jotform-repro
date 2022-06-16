@@ -37,17 +37,15 @@ const repro = async () => {
     jotformBaseUrl,
   });
 
-  await Promise.all([
-    testPdfDownloadUsingApiKeyAuth(
-      () => jotformPdfApiClient.downloadGenericPdf(formId, submissionId),
-      "API: Generic PDF (API Key auth)"
-    ),
+  await testPdfDownloadUsingApiKeyAuth(
+    () => jotformPdfApiClient.downloadGenericPdf(formId, submissionId),
+    "API: Generic PDF (API Key auth)"
+  );
 
-    testPdfDownloadUsingApiKeyAuth(
-      () => jotformPdfApiClient.downloadSmartPdf(formId, submissionId),
-      "API: Smart PDF (API Key auth)"
-    ),
-  ]);
+  await testPdfDownloadUsingApiKeyAuth(
+    () => jotformPdfApiClient.downloadSmartPdf(formId, submissionId),
+    "API: Smart PDF (API Key auth)"
+  );
 };
 
 repro();
