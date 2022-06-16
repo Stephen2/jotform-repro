@@ -20,7 +20,7 @@ export function makeJotformPdfApiClient({ jotformApiKey, jotformBaseUrl }: Param
       submissionid: submissionId,
     };
     const urlToUse = `API/generatePDF?${new URLSearchParams(params).toString()}`;
-    console.log("USING URL: ", urlToUse);
+    console.log("USING URL: ", `${jotformBaseUrl}/${urlToUse}`);
 
     const response = await httpClient.get<Stream>(urlToUse, { responseType: "stream" });
 
@@ -34,7 +34,7 @@ export function makeJotformPdfApiClient({ jotformApiKey, jotformBaseUrl }: Param
       submissionID,
     };
     const urlToUse = `API/pdf-converter/${jotformFormId}/fill-pdf?${new URLSearchParams(params).toString()}`;
-    console.log("USING URL: ", urlToUse);
+    console.log("USING URL: ", `${jotformBaseUrl}/${urlToUse}`);
 
     const response = await httpClient.get<Stream>(urlToUse, { responseType: "stream" });
 
